@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# Platforma do zgłaszania i wyszukiwania odpadów środowiskowych
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Opis
 
-Currently, two official plugins are available:
+Projekt to platforma webowa, stworzona w React z użyciem TypeScript i Vite, która umożliwia użytkownikom:
+- Zgłaszanie odpadów środowiskowych wymagających wywiezienia.
+- Wyszukiwanie takich odpadów przez firmy utylizacyjne.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Aplikacja oferuje funkcjonalności takie jak:
+- Rejestracja użytkowników.
+- Dodawanie ogłoszeń z dokładnym adresem.
+- Wizualizacja ogłoszeń na interaktywnej mapie.
 
-## Expanding the ESLint configuration
+Jest to mój autorski projekt, realizowany od podstaw samodzielnie, jako część mojego rozwoju jako frontend developera. Projekt łączy nowoczesne technologie frontendowe z praktycznym zastosowaniem społecznym, wspierając ochronę środowiska.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologie użyte w projekcie
 
-- Configure the top-level `parserOptions` property like this:
+- **React i TypeScript** - do tworzenia komponentów i logiki aplikacji.
+- **Vite** - jako narzędzie do budowy projektu.
+- **Firebase** - do uwierzytelniania użytkowników i zarządzania bazą danych.
+- **Leaflet.js** - do wyświetlania lokalizacji odpadów na mapie.
+- **TailwindCSS** - do szybkiego stylizowania komponentów.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Cel projektu
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Celem projektu jest ułatwienie komunikacji między:
+1. Osobami zgłaszającymi odpady.
+2. Firmami utylizacyjnymi.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Platforma zapewnia wygodny i intuicyjny system, który wspiera ochronę środowiska oraz efektywne zarządzanie odpadami.
