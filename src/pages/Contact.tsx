@@ -1,6 +1,11 @@
+import PageNav from "../components/PageNav";
+
 function Contact() {
     return ( 
-        <div> TEST</div>
+        <div>
+            <PageNav/>
+            <div> TEST</div>
+            </div>
      );
 }
 

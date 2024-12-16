@@ -1,7 +1,12 @@
-function Pages() {
+import PageNav from "../components/PageNav";
+
+function About() {
     return ( 
-        <div> TEST</div>
+        <>
+        <PageNav/>
+            <div> TEST</div>
+            </>
      );
 }
 
-export default Pages;
+export default About;
