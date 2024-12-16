@@ -5,7 +5,8 @@ import About from './pages/About'
 import Admin from './pages/Admin'
 import Contact from './pages/Contact'
 import EnteringOrders from './pages/EnteringOrders'
-import SerchigOrders from './pages/SerchingOrders'
+import SearchingOrders from './pages/SearchingOrders'
+import PageNotFound from './pages/PageNotFound'
 
 function App() {
 	return (
@@ -17,7 +18,8 @@ function App() {
 					<Route path='admin' element={<Admin />} />
 					<Route path='contact' element={<Contact />} />
 					<Route path='enteringOrders' element={<EnteringOrders />} />
-					<Route path='serchigOrders' element={<SerchigOrders />} />
+					<Route path='searchingOrders' element={<SearchingOrders />} />
+					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
 		</>

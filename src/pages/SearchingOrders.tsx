@@ -1,7 +1,7 @@
-function SerchingOrders() {
+function SearchingOrders() {
     return ( 
         <div>Orders and interactive map</div>
      );
 }
 
-export default SerchingOrders;
+export default SearchingOrders;
