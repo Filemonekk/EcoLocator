@@ -4,7 +4,7 @@ function Contact() {
     return ( 
         <div>
             <PageNav/>
-            <div> TEST</div>
+            <div> TEST!!! contact</div>
             </div>
      );
 }

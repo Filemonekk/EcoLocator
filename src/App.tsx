@@ -7,10 +7,12 @@ import Contact from './pages/Contact'
 import EnteringOrders from './pages/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders'
 import PageNotFound from './pages/PageNotFound'
+import Heading from './components/Heading'
 
 function App() {
 	return (
 		<>
+			<Heading title={"Let's clean the world"} />
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />

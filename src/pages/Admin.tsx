@@ -4,7 +4,7 @@ function Admin() {
     return ( 
         <div>
         <PageNav/>
-            <div> TEST</div>
+            <div> TEST ADMIN</div>
 </div>
      );
 }
