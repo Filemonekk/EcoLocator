@@ -1,9 +1,11 @@
 import { NavLink } from 'react-router-dom'
+import Logo from './Logo'
 
 function PageNav() {
 	return (
 		<nav>
 			<ul>
+			<Logo/>
 				<li>
 					<NavLink to='/'>Home</NavLink>
 				</li>
@@ -15,6 +17,9 @@ function PageNav() {
 				</li>
 				<li>
 					<NavLink to='/Admin'>Admin</NavLink>
+				</li>
+				<li>
+					<NavLink to='/Register'>Register</NavLink>
 				</li>
 			</ul>
 		</nav>

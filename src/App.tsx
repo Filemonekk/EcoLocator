@@ -7,12 +7,14 @@ import Contact from './pages/Contact'
 import EnteringOrders from './pages/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders'
 import PageNotFound from './pages/PageNotFound'
-import Heading from './components/Heading'
+import Register from './pages/Register'
+
+
 
 function App() {
 	return (
 		<>
-			<Heading title={"Let's clean the world"} />
+			{ /*<Heading title={"Let's clean the world"} / >*/}
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
@@ -21,6 +23,7 @@ function App() {
 					<Route path='contact' element={<Contact />} />
 					<Route path='enteringOrders' element={<EnteringOrders />} />
 					<Route path='searchingOrders' element={<SearchingOrders />} />
+					<Route path='register' element={<Register />} />
 					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
