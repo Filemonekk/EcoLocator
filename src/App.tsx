@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import HomePage from './pages/HomePage'
 import About from './pages/About'
 import Admin from './pages/Admin'
@@ -8,6 +8,7 @@ import EnteringOrders from './pages/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders'
 import PageNotFound from './pages/PageNotFound'
 import Register from './pages/Register'
+import HeroImage from './components/HeroImage'
 
 
 
@@ -27,6 +28,11 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
+			<HeroImage
+        imageUrl= '/img/HeroImage1920.jpg'
+        altText="ECO image"
+      />
+
 		</>
 	)
 }
