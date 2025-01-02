@@ -1,13 +1,12 @@
-import PageNav from "../components/PageNav";
-
+import PageNav from '../components/PageNav/PageNav'
 
 function Admin() {
-    return ( 
-        <div>
-        <PageNav/>
-            <div> TEST ADMIN</div>
-</div>
-     );
+	return (
+		<div>
+			<PageNav />
+			<div> TEST ADMIN</div>
+		</div>
+	)
 }
 
-export default Admin;
+export default Admin

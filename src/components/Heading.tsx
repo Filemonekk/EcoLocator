@@ -1,3 +1,5 @@
+import './Heading.scss'
+
 type HeadingProps = { title: string }
 
 const Heading = ({ title }: HeadingProps) => {

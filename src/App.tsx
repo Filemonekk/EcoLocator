@@ -8,14 +8,12 @@ import EnteringOrders from './pages/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders'
 import PageNotFound from './pages/PageNotFound'
 import Register from './pages/Register'
-import HeroImage from './components/HeroImage'
-
 
 
 function App() {
 	return (
 		<>
-			{ /*<Heading title={"Let's clean the world"} / >*/}
+			{/*<Heading title={"Let's clean the world"} / >*/}
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<HomePage />} />
@@ -28,11 +26,7 @@ function App() {
 					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
-			<HeroImage
-        imageUrl= '/img/HeroImage1920.jpg'
-        altText="ECO image"
-      />
-
+			
 		</>
 	)
 }

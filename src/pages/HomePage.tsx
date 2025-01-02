@@ -1,6 +1,8 @@
-import PageNav from '../components/PageNav'
+import PageNav from '../components/PageNav/PageNav'
 
 import { Link } from 'react-router-dom'
+import HeroImage from '../components/HeroImage/HeroImage'
+
 
 function HomePage() {
 	return (
@@ -8,7 +10,9 @@ function HomePage() {
 			<PageNav />
 
 			<section>
-				<h1>"Let's clean the world"</h1>
+
+			<HeroImage imageUrl='/img/HeroImage1920.jpg' altText='ECO image' headingTitle="Let's clean the world" />
+				
 				<h2>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure dolores est minima quo eum quam
 					officiis optio quod aliquam!

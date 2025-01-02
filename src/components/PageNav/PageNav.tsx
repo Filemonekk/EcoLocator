@@ -1,20 +1,18 @@
 import { NavLink } from 'react-router-dom'
-import Logo from './Logo'
+import Logo from '../Logo/Logo'
 import './PageNav.scss'
 
 function PageNav() {
 	return (
 		<nav className='navbar'>
 			<ul className='ul-container'>
-			
-				
 				<li>
 					<NavLink to='/About'>About</NavLink>
 				</li>
 				<li>
 					<NavLink to='/Contact'>Contact</NavLink>
 				</li>
-				<Logo/>
+				<Logo />
 				<li>
 					<NavLink to='/Admin'>Admin</NavLink>
 				</li>

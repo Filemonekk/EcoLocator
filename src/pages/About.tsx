@@ -1,14 +1,12 @@
-
-import PageNav from '../components/PageNav'
-
+import PageNav from '../components/PageNav/PageNav'
 
 function About() {
-    return ( 
-        <>
-        <PageNav/>
-            <div> TEST</div>
-            </>
-     );
+	return (
+		<>
+			<PageNav />
+			<div> TEST</div>
+		</>
+	)
 }
 
-export default About;
+export default About
