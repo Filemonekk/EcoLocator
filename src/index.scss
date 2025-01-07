@@ -5,3 +5,17 @@
 
 $main-color: #126d30;
 $main-font: 'Open Sans', sans-serif;
+
+.cta:link,
+.cta:visited {
+  display: inline-block;
+  background-color: white;
+  color: $main-color;
+  font-family: $main-font;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+}

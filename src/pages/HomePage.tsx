@@ -20,8 +20,8 @@ const HomePage: React.FC = () => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure dolores est minima quo eum quam
 					officiis optio quod aliquam!
 				</h2>
-				<Link to='/searchingOrders'>Search for Orders</Link>
-				<Link to='/enteringOrders'>Add order</Link>
+				<Link to='/searchingOrders' className='cta'>Search for Orders</Link>
+				<Link to='/enteringOrders' className='cta'>Add order</Link>
 			</section>
 		</main>
 	)

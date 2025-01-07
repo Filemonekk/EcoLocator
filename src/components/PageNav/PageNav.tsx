@@ -11,8 +11,10 @@ function PageNav() {
 				</li>
 				<li>
 					<NavLink to='/Contact'>Contact</NavLink>
-				</li>
-				<Logo />
+					</li>
+					
+						<Logo />
+					
 				<li>
 					<NavLink to='/Admin'>Admin</NavLink>
 				</li>

@@ -12,6 +12,7 @@
 	height: 50px;
 }
 
+
 .ul-container {
 	display: flex;
 	align-items: center;
@@ -26,6 +27,8 @@ li a {
 	color: rgba(0, 0, 0, 0.63);
 	text-decoration: none;
 	margin: 10px;
+	position: relative;
+	z-index: 10;
 }
 
 li a:hover {
