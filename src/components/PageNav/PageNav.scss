@@ -1,6 +1,10 @@
+@import "/src/index.scss";
+
 .navbar {
 	background-color: #ffffff;
 	padding: 10px 10px;
+	font-family: $main-font;
+	font-weight: bold;
 	font-size: 2rem;;
 }
 
@@ -19,7 +23,7 @@
 }
 
 li a {
-	color: black;
+	color: rgba(0, 0, 0, 0.63);
 	text-decoration: none;
 	margin: 10px;
 }
@@ -30,12 +34,12 @@ li a:hover {
 
 .nav-links a {
 	text-decoration: none;
-	color: #0a6e50;
+	color: $main-color;
 	transition: font-size 0.3s ease;
 	box-sizing: border-box;
 }
 
 .navbar .active {
-	color: #0a6e50;
+	color:  $main-color;
 	text-decoration: none;
 }

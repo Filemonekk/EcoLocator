@@ -1,10 +1,10 @@
 import PageNav from '../components/PageNav/PageNav'
 
-function Admin() {
+const Admin: React.FC =() => {
 	return (
 		<div>
 			<PageNav />
-			<div> TEST ADMIN</div>
+			<div> ADMIN</div>
 		</div>
 	)
 }

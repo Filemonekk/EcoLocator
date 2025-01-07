@@ -1,7 +1,12 @@
-function SearchingOrders() {
-    return ( 
-        <div>Orders and interactive map</div>
-     );
+import PageNav from '../components/PageNav/PageNav'
+
+const SearchingOrders: React.FC =() => {
+	return (
+		<div>
+			<PageNav />
+			<div> Orders and interactive map</div>
+		</div>
+	)
 }
 
-export default SearchingOrders;
+export default SearchingOrders

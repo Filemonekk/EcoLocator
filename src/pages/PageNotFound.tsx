@@ -1,9 +1,10 @@
+import React from 'react';
+
 import PageNav from '../components/PageNav/PageNav'
 
-function PageNotFound() {
+const PageNotFound: React.FC = () => {
 	return (
 		<div>
-			{' '}
 			<PageNav />
 			<div>Page not found </div>
 		</div>

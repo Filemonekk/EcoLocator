@@ -6,7 +6,7 @@ function Logo() {
 	return (
 		<div className='logo-container'>
 		<Link to='/'>
-			<img src='/img/logoEcoLocator.png' alt='EcoLocator logo' />
+			<img src='/img/updated_logo.png' alt='EcoLocator logo' />
 			</Link>
 			</div>
 	)

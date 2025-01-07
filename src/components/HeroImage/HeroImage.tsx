@@ -1,7 +1,7 @@
 import React from 'react'
 import './HeroImage.scss'
-import '../Heading'
-import Heading from '../Heading'
+import '../Heading/Heading'
+import Heading from '../Heading/Heading'
 
 interface HeroImageProps {
 	imageUrl: string

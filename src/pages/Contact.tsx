@@ -1,10 +1,10 @@
 import PageNav from '../components/PageNav/PageNav'
 
-function Contact() {
+const Contact: React.FC =() => {
 	return (
 		<div>
 			<PageNav />
-			<div> TEST!!! contact</div>
+			<div> Contact us</div>
 		</div>
 	)
 }

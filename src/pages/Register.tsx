@@ -1,6 +1,6 @@
 import PageNav from '../components/PageNav/PageNav'
 
-function Registration() {
+const Registration: React.FC =() => {
 	return (
 		<>
 			<PageNav />

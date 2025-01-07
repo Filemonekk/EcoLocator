@@ -1,10 +1,10 @@
 import PageNav from '../components/PageNav/PageNav'
 
-function About() {
+const About: React.FC =() => {
 	return (
 		<>
 			<PageNav />
-			<div> TEST</div>
+			<div> ABOUT US</div>
 		</>
 	)
 }
