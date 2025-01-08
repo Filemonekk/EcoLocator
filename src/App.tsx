@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.scss'
 import HomePage from './pages/HomePage'
-import About from './pages/About'
 import Admin from './pages/Admin'
+import About from './pages/About'
+import Shop from './pages/Shop'
 import Contact from './pages/Contact'
 import EnteringOrders from './pages/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders'
@@ -19,6 +20,7 @@ function App() {
 					<Route path='/' element={<HomePage />} />
 					<Route path='about' element={<About />} />
 					<Route path='admin' element={<Admin />} />
+					<Route path='shop' element={<Shop />} />
 					<Route path='contact' element={<Contact />} />
 					<Route path='enteringOrders' element={<EnteringOrders />} />
 					<Route path='searchingOrders' element={<SearchingOrders />} />

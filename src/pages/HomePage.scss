@@ -50,6 +50,15 @@ h2 {
     font-weight: 200;
 }
 
+.button-section {
+display: flex;
+flex-direction: column;
+}
+
+.button-section .cta {
+	margin-top: 20px;
+}
+
 
 
 

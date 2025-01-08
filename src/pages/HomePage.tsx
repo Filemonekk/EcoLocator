@@ -1,4 +1,5 @@
 import PageNav from '../components/PageNav/PageNav'
+import Footer from '../components/Footer/Footer'
 import './HomePage.scss'
 import { Link } from 'react-router-dom'
 {
@@ -6,7 +7,7 @@ import { Link } from 'react-router-dom'
 }
 
 const HomePage: React.FC = () => {
-	return (
+	return (<>
 		<main className='homepage'>
 			<PageNav />
 			<section className='section'>
@@ -20,10 +21,16 @@ const HomePage: React.FC = () => {
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure dolores est minima quo eum quam
 					officiis optio quod aliquam!
 				</h2>
+				<div className='button-section'>
 				<Link to='/searchingOrders' className='cta'>Search for Orders</Link>
-				<Link to='/enteringOrders' className='cta'>Add order</Link>
+					<Link to='/enteringOrders' className='cta'>Add order</Link>
+					</div>
 			</section>
+			
 		</main>
+		<Footer />
+		</>
+
 	)
 }
 

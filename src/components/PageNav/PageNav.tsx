@@ -10,16 +10,16 @@ function PageNav() {
 					<NavLink to='/About'>About</NavLink>
 				</li>
 				<li>
-					<NavLink to='/Contact'>Contact</NavLink>
+					<NavLink to='/Shop'>Shop</NavLink>
 					</li>
 					
 						<Logo />
 					
 				<li>
-					<NavLink to='/Admin'>Admin</NavLink>
+					<NavLink to='/Register'>Register</NavLink>
 				</li>
 				<li>
-					<NavLink to='/Register'>Register</NavLink>
+					<NavLink to='/Contact'>Contact</NavLink>
 				</li>
 			</ul>
 		</nav>

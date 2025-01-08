@@ -1,0 +1,76 @@
+@import "/src/index.scss";
+
+.footer {
+    background-color: #3c6d40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: $main-font;
+    margin: 3rem;
+    font-size: 1.2rem;
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    li a {
+      color: rgba(255, 255, 255, 0.63);
+      text-decoration: none;
+      margin: 10px;
+      position: relative;
+      z-index: 10;
+    }
+    
+    li a:hover {
+      font-size: 24px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: $main-color;
+      transition: font-size 0.3s ease;
+      box-sizing: border-box;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+  
+      a {
+        color: #ddd;
+        text-decoration: none;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #1abc9c;
+        }
+      }
+    }
+  
+    .socials {
+      display: flex;
+      gap: 15px;
+  
+      a {
+        color: #ddd;
+        text-decoration: none;
+        transition: color 0.3s;
+  
+        &:hover {
+          color: #3498db;
+        }
+      }
+    }
+  
+    .bottomBar {
+      margin-top: 20px;
+      font-size: 0.875rem;
+    }
+  }
+  
