@@ -23,7 +23,12 @@ function App() {
 					<Route path='shop' element={<Shop />} />
 					<Route path='contact' element={<Contact />} />
 					<Route path='enteringOrders' element={<EnteringOrders />} />
-					<Route path='searchingOrders' element={<SearchingOrders />} />
+					<Route path='searchingOrders' element={<SearchingOrders />}>
+						<Route path='cities' element={<p>Formularz do wpisania miasta</p>}
+						/>
+						<Route path='waste' element={<p>Listbox z rodzajami odpadów</p>} />
+						<Route path='company' element={<p>Lista dostępnych firm</p>}/>
+						</Route>
 					<Route path='register' element={<Register />} />
 					<Route path='*' element={<PageNotFound />} />
 				</Routes>
