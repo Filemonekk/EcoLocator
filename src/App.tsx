@@ -1,42 +1,76 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.scss'
-import HomePage from './pages/HomePage'
-import Admin from './pages/Admin'
-import About from './pages/About'
-import Shop from './pages/Shop'
-import Contact from './pages/Contact'
-import EnteringOrders from './pages/EnteringOrders'
-import SearchingOrders from './pages/SearchingOrders'
-import PageNotFound from './pages/PageNotFound'
-import Register from './pages/Register'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import './App.scss';
+import HomePage from './pages/HomePage';
+import Admin from './pages/Admin';
+import About from './pages/About';
+import Shop from './pages/Shop';
+import Contact from './pages/Contact';
+import EnteringOrders from './pages/EnteringOrders';
+import SearchingOrders from './pages/SearchingOrders';
+import PageNotFound from './pages/PageNotFound';
+import Register from './pages/Register';
 
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage />,
+    errorElement: <PageNotFound />,
+  },
+  {
+    path: 'about',
+    element: <About />,
+  },
+  {
+    path: 'admin',
+    element: <Admin />,
+  },
+  {
+    path: 'shop',
+    element: <Shop />,
+  },
+  {
+    path: 'contact',
+    element: <Contact />,
+  },
+  {
+    path: 'enteringOrders',
+    element: <EnteringOrders />,
+  },
+  {
+    path: 'searchingOrders',
+    element: <SearchingOrders />,
+    children: [
+      {
+        index: true,
+        element: <p>List</p>,
+      },
+      {
+        path: 'cities',
+        element: <p>Formularz do wpisania miasta</p>,
+      },
+      {
+        path: 'waste',
+        element: <p>Listbox z rodzajami odpadów</p>,
+      },
+      {
+        path: 'company',
+        element: <p>Lista dostępnych firm</p>,
+      },
+    ],
+  },
+  {
+    path: 'register',
+    element: <Register />,
+  },
+  {
+    path: '*',
+    element: <PageNotFound />,
+  },
+]);
 
 function App() {
-	return (
-		<>
-			{/*<Heading title={"Let's clean the world"} / >*/}
-			<BrowserRouter>
-				<Routes>
-					<Route path='/' element={<HomePage />} />
-					<Route path='about' element={<About />} />
-					<Route path='admin' element={<Admin />} />
-					<Route path='shop' element={<Shop />} />
-					<Route path='contact' element={<Contact />} />
-					<Route path='enteringOrders' element={<EnteringOrders />} />
-					<Route path='searchingOrders' element={<SearchingOrders />}>
-						<Route index element={<p>List</p>}/>
-						<Route path='cities' element={<p>Formularz do wpisania miasta</p>}
-						/>
-						<Route path='waste' element={<p>Listbox z rodzajami odpadów</p>} />
-						<Route path='company' element={<p>Lista dostępnych firm</p>}/>
-						</Route>
-					<Route path='register' element={<Register />} />
-					<Route path='*' element={<PageNotFound />} />
-				</Routes>
-			</BrowserRouter>
-			
-		</>
-	)
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
+
