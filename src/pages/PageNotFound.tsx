@@ -6,7 +6,7 @@ const PageNotFound: React.FC = () => {
 	return (
 		<div>
 			<PageNav />
-			<div>Page not found </div>
+			<h1 className='pageNotFound'>Page not found 😢</h1>
 		</div>
 	)
 }
