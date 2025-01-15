@@ -7,15 +7,10 @@ import { Link } from 'react-router-dom'
 }
 
 const HomePage: React.FC = () => {
-	return (<>
+  return (<>
+    <PageNav />
 		<main className='homepage'>
-			<PageNav />
 			<section className='section'>
-				{/*} <HeroImage
-			imageUrl='/img/HeroImage1920.jpg' 
-			altText='ECO image' 
-			headingTitle="Let's clean the world" 
-		  />*/}
 				<h1>Let's clean the world</h1>
 				<h2>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure dolores est minima quo eum quam
