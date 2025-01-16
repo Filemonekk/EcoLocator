@@ -8,11 +8,11 @@ const Footer: React.FC = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-      <ul className='nav-links'>
-				<li>
-					<NavLink to='/Admin'>Admin</NavLink>
-				</li>
-			</ul>
+
+     <nav className={styles.navLinks} aria-label="Footer Navigation">
+          <NavLink to="/admin">Admin</NavLink>
+        </nav>
+
         <div className={styles.socials}>
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div className={styles.bottomBar}>
-        <p>&copy; {currentYear} EcoLocator. All Rights Reserved.</p>
+        <p>&copy; {currentYear} <strong>EcoLocator</strong>. All Rights Reserved.</p>
       </div>
     </footer>
   );

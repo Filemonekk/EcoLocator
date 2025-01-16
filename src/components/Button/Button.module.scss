@@ -1,6 +1,6 @@
-@import "/src/index.scss";
+@use "/src/index.scss" as *;
 
-.button-style {
+.button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     font-weight: bold;

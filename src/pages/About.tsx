@@ -5,6 +5,7 @@ const About: React.FC =() => {
 		<>
 			<PageNav />
 			<div> ABOUT US</div>
+		
 		</>
 	)
 }

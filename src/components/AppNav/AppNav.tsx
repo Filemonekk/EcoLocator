@@ -4,21 +4,19 @@ import styles from './AppNav.module.scss'
 
 const AppNav: React.FC = () => {
 	return (
-		<>
-			<nav className={styles.navList}>
-				<ul>
-					<li>
-						<NavLink to='cities'>By Cities</NavLink>
-					</li>
-					<li>
-						<NavLink to='waste'>By WasteType</NavLink>
-					</li>
-					<li>
-						<NavLink to='company'>By Companies</NavLink>
-					</li>
-				</ul>
-			</nav>
-		</>
+		<nav className={styles.navList}>
+			<ul>
+				<li>
+					<NavLink to='cities'>By Cities</NavLink>
+				</li>
+				<li>
+					<NavLink to='waste'>By WasteType</NavLink>
+				</li>
+				<li>
+					<NavLink to='company'>By Companies</NavLink>
+				</li>
+			</ul>
+		</nav>
 	)
 }
 
