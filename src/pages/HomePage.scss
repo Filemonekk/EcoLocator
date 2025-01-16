@@ -3,13 +3,16 @@
 .homepage {
 	display: flex;
 	flex-direction: column;
-	height: 65vh;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
 	margin: 3rem;
 	background-color: rgb(255, 255, 255);
 	background-image: url('./img/HeroImage1920.jpg');
 	background-size: cover;
 	background-position: center;
 	padding: 2rem 2rem;
+	position: relative;
 }
 
 .homepage::before {
@@ -67,5 +70,72 @@ h2 {
 
 .button-section .cta {
 	margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage {
+        height: 100vh;
+        padding: 1.5rem;
+    }
+
+    .section {
+        width: 95%;
+        max-width: 90%;
+        gap: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .button-section {
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage {
+        height: 100vh;
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .section {
+        width: 100%;
+        max-width: 90%;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        margin: 0.5rem;
+    }
+
+    .button-section {
+        gap: 0.75rem;
+    }
+
+    .button-section .cta {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
 }
 
