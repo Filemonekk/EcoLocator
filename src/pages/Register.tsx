@@ -1,14 +1,17 @@
+import React from 'react'
 import PageNav from '../components/PageNav/PageNav'
 import RegistrationForm from '../components/RegistrationForm/RegistrationForm'
+import style from './Register.module.scss'
 
-const Registration: React.FC =() => {
+
+const Register: React.FC = () => {
 	return (
-		<>
-			<PageNav />
-			<div>Register to join :)</div>
-			<RegistrationForm/>
-		</>
+		< div className = { style.pageContainer } >
+		<PageNav />
+	<RegistrationForm className={style.RegistrationContainer} />
+		</ div>
 	)
 }
 
-export default Registration
+
+export default Register;
