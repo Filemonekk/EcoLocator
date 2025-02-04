@@ -13,15 +13,13 @@ const HomePage: React.FC = () => {
 			<section className='section'>
 				<h1>Let's clean the world</h1>
 				<h2>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure dolores est minima quo eum quam
-					officiis optio quod aliquam!
+				Join the movement for a cleaner planet! Report waste for disposal or find materials for recycling - together, we reduce waste, protect nature, and build a sustainable future.
 				</h2>
 				<div className='button-section'>
 				<Link to='/searchingOrders' className='cta'>Search for Orders</Link>
 					<Link to='/enteringOrders' className='cta'>Add order</Link>
 					</div>
 			</section>
-			
 		</main>
 		<Footer />
 		</>

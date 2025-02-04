@@ -1,65 +1,64 @@
 import styles from './WasteForm.module.scss'
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button'
+import Col from 'react-bootstrap/Col'
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row'
+
 
 function WasteForm() {
-    return (
-        <div className={styles.container}>
-    <Form className={styles.form}>
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridEmail">
-          <Form.Label>Email</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
-        </Form.Group>
+	return (
+		<div className={styles.container}>
+			<Form className={styles.form}>
+				<Row className='mb-3'>
+					<Form.Group as={Col} controlId='formDescription'>
+						<Form.Label>Description</Form.Label>
+						<Form.Control type='text' placeholder='Describe the waste' />
+					</Form.Group>
 
-        <Form.Group as={Col} controlId="formGridPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-      </Row>
+					<Form.Group as={Col} controlId='formWasteType'>
+						<Form.Label>Type of waste</Form.Label>
+						<Form.Select defaultValue='Choose...'>
+							<option>Paper</option>
+							<option>Glass</option>
+							<option>Bio-waste</option>
+							<option>Hazardous waste</option>
+							<option>Expired medicines and chemicals</option>
+							<option>Used batteries and accumulators</option>
+							<option>Used tires</option>
+							<option>Textile and clothing waste</option>
+							<option>...</option>
+						</Form.Select>
+					</Form.Group>
+				</Row>
 
-      <Form.Group className="mb-3" controlId="formGridAddress1">
-        <Form.Label>Address</Form.Label>
-        <Form.Control placeholder="1234 Main St" />
-      </Form.Group>
+				<Form.Group className='mb-3' controlId='formAddress'>
+					<Form.Label>Address</Form.Label>
+					<Form.Control placeholder='1234 Main St' />
+				</Form.Group>
 
-      <Form.Group className="mb-3" controlId="formGridAddress2">
-        <Form.Label>Address 2</Form.Label>
-        <Form.Control placeholder="Apartment, studio, or floor" />
-      </Form.Group>
+				<Row className='mb-3'>
+					<Form.Group as={Col} controlId='formCity'>
+						<Form.Label>City</Form.Label>
+						<Form.Control />
+					</Form.Group>
 
-      <Row className="mb-3">
-        <Form.Group as={Col} controlId="formGridCity">
-          <Form.Label>City</Form.Label>
-          <Form.Control />
-        </Form.Group>
+					<Form.Group as={Col} controlId='formZip'>
+						<Form.Label>Zip</Form.Label>
+						<Form.Control />
+					</Form.Group>
 
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Select defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Select>
-        </Form.Group>
+					<Form.Group controlId='formFile' className='mb-3'>
+						<Form.Label>Upload Photos</Form.Label>
+						<Form.Control type='file' multiple />
+					</Form.Group>
+				</Row>
 
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
-        </Form.Group>
-      </Row>
-
-      <Form.Group className="mb-3" id="formGridCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
-
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-            </Form>
-            </div>
-  );
+				<Button variant='primary' type='submit' className={styles.submitButton}>
+					Submit Waste Report
+				</Button>
+			</Form>
+		</div>
+	)
 }
 
-export default WasteForm;
+export default WasteForm
