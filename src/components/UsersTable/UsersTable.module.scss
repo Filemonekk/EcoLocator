@@ -1,0 +1,25 @@
+.usersTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .usersTable th, .users-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .usersTable th {
+    background-color: #105219;
+    color: white;
+  }
+  
+  .usersTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .usersTable tr:hover {
+    background-color: #ddd;
+  }
+  
