@@ -1,0 +1,25 @@
+.wasteTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .wasteTable th, .users-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .wasteTable th {
+    background-color: #105219;
+    color: white;
+  }
+  
+  .wasteTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .wasteTable tr:hover {
+    background-color: #ddd;
+  }
+  
