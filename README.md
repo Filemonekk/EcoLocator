@@ -19,7 +19,7 @@ The application offers features such as:
 ## Technologies Used in the Project
 - **React and TypeScript** - for creating components and application logic.
 - **Vite** - as a build tool for the project.
-- **Firebase/Air Table** - for user authentication and database management.
+- **Air Table** - for user authentication and database management.
 - **Leaflet.js** - for displaying waste locations on a map.
 - **SASS** - for quick styling of components.
 
@@ -52,7 +52,7 @@ Aplikacja oferuje funkcjonalności takie jak:
 
 - **React i TypeScript** - do tworzenia komponentów i logiki aplikacji.
 - **Vite** - jako narzędzie do budowy projektu.
-- **Firebase/Air Table** - do uwierzytelniania użytkowników i zarządzania bazą danych.
+- **Air Table** - do uwierzytelniania użytkowników i zarządzania bazą danych.
 - **Leaflet.js** - do wyświetlania lokalizacji odpadów na mapie.
 - **SASS** - do szybkiego stylizowania komponentów.
 
