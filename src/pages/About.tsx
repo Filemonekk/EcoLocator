@@ -1,7 +1,7 @@
 import PageNav from '../components/PageNav/PageNav'
 import styles from './About.module.scss'
 import ecoImage from '/img/tree1280.jpg'
-<img src="" alt="" />
+
 
 const About: React.FC = () => {
 	return (
