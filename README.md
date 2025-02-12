@@ -4,6 +4,9 @@
 
 ## Platform for Reporting and Searching Environmental Waste
 
+## DEMO
+You can see the app in action here:
+
 ## Description
 This project is a web platform, built with React using TypeScript and Vite, that allows users to:
 
@@ -19,7 +22,7 @@ The application offers features such as:
 ## Technologies Used in the Project
 - **React and TypeScript** - for creating components and application logic.
 - **Vite** - as a build tool for the project.
-- **Firebase/Air Table** - for user authentication and database management.
+- **Air Table** - for user authentication and database management.
 - **Leaflet.js** - for displaying waste locations on a map.
 - **SASS** - for quick styling of components.
 
@@ -35,6 +38,9 @@ The platform provides a convenient and intuitive system that supports environmen
 ## Jest to mój autorski projekt, realizowany od podstaw samodzielnie, jako część mojego rozwoju jako frontend developera. Projekt łączy nowoczesne technologie frontendowe z praktycznym zastosowaniem społecznym, wspierając ochronę środowiska.
 
 # Platforma do zgłaszania i wyszukiwania odpadów środowiskowych
+
+## Demo
+Możesz zobaczyć działanie aplikacji tutaj: 
 
 ## Opis
 
@@ -52,7 +58,7 @@ Aplikacja oferuje funkcjonalności takie jak:
 
 - **React i TypeScript** - do tworzenia komponentów i logiki aplikacji.
 - **Vite** - jako narzędzie do budowy projektu.
-- **Firebase/Air Table** - do uwierzytelniania użytkowników i zarządzania bazą danych.
+- **Air Table** - do uwierzytelniania użytkowników i zarządzania bazą danych.
 - **Leaflet.js** - do wyświetlania lokalizacji odpadów na mapie.
 - **SASS** - do szybkiego stylizowania komponentów.
 
