@@ -5,7 +5,7 @@
 ## Platform for Reporting and Searching Environmental Waste
 
 ## DEMO
-You can see the app in action here:
+You can see the app in action here: [EcoLocator](https://filemonekk.github.io/EcoLocator/)
 
 ## Description
 This project is a web platform, built with React using TypeScript and Vite, that allows users to:
@@ -40,7 +40,7 @@ The platform provides a convenient and intuitive system that supports environmen
 # Platforma do zgłaszania i wyszukiwania odpadów środowiskowych
 
 ## Demo
-Możesz zobaczyć działanie aplikacji tutaj: 
+Możesz zobaczyć działanie aplikacji tutaj: [EcoLocator](https://filemonekk.github.io/EcoLocator/)
 
 ## Opis
 
