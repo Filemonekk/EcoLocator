@@ -4,6 +4,9 @@
 
 ## Platform for Reporting and Searching Environmental Waste
 
+## DEMO
+You can see the app in action here:
+
 ## Description
 This project is a web platform, built with React using TypeScript and Vite, that allows users to:
 
@@ -35,6 +38,9 @@ The platform provides a convenient and intuitive system that supports environmen
 ## Jest to mój autorski projekt, realizowany od podstaw samodzielnie, jako część mojego rozwoju jako frontend developera. Projekt łączy nowoczesne technologie frontendowe z praktycznym zastosowaniem społecznym, wspierając ochronę środowiska.
 
 # Platforma do zgłaszania i wyszukiwania odpadów środowiskowych
+
+## Demo
+Możesz zobaczyć działanie aplikacji tutaj: 
 
 ## Opis
 
