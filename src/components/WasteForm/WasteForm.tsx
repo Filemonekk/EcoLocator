@@ -12,6 +12,8 @@ interface WasteFormProps {
 type WasteData = {
 	description?: string
 	wasteType?: string
+	companyName?: string
+	companyID?: string
 	address?: string
 	city?: string
 	zip?: string
@@ -22,6 +24,8 @@ const WasteForm: React.FC<WasteFormProps> = () => {
 	const [formData, setFormData] = useState<WasteData>({
 		description: '',
 		wasteType: '',
+		companyName: '',
+		companyID: '',
 		address: '',
 		city: '',
 		zip: '',
@@ -59,6 +63,9 @@ const WasteForm: React.FC<WasteFormProps> = () => {
 					fields: {
 						Description: formData.description,
 						'Type of waste': formData.wasteType,
+						City: formData.city,
+						'Company Name': formData.companyName,
+						'Company ID': formData.companyID,
 						Address: formData.address,
 						ZipCode: formData.zip,
 					},
@@ -103,6 +110,26 @@ const WasteForm: React.FC<WasteFormProps> = () => {
 				{isSubmitted && <p className={styles.success}>Form submitted successfully!</p>}
 
 				<Row className='mb-3'>
+					<Form.Group as={Col} controlId='wasteType'>
+						<Form.Label>Type of waste</Form.Label>
+						<Form.Select
+							className={styles.formSelect}
+							value={formData.wasteType}
+							name='wasteType'
+							onChange={handleChange}
+							required>
+							<option value='...'>...</option>
+							<option value='Paper'>Paper</option>
+							<option value='Glass'>Glass</option>
+							<option value='Bio-waste'>Bio-waste</option>
+							<option value='Hazardous waste'>Hazardous waste</option>
+							<option value='Expired medicines and chemicals'>Expired medicines and chemicals</option>
+							<option value='Used batteries and accumulators'>Used batteries and accumulators</option>
+							<option value='Used tires'>Used tires</option>
+							<option value='Textile and clothing waste'>Textile and clothing waste</option>
+						</Form.Select>
+					</Form.Group>
+
 					<Form.Group as={Col} controlId='description'>
 						<Form.Label>Description</Form.Label>
 						<Form.Control
@@ -113,21 +140,6 @@ const WasteForm: React.FC<WasteFormProps> = () => {
 							onChange={handleChange}
 							required
 						/>
-					</Form.Group>
-
-					<Form.Group as={Col} controlId='wasteType'>
-						<Form.Label>Type of waste</Form.Label>
-						<Form.Select value={formData.wasteType} name='wasteType' onChange={handleChange} required>
-							<option>Paper</option>
-							<option>Glass</option>
-							<option>Bio-waste</option>
-							<option>Hazardous waste</option>
-							<option>Expired medicines and chemicals</option>
-							<option>Used batteries and accumulators</option>
-							<option>Used tires</option>
-							<option>Textile and clothing waste</option>
-							<option>...</option>
-						</Form.Select>
 					</Form.Group>
 				</Row>
 
@@ -151,6 +163,11 @@ const WasteForm: React.FC<WasteFormProps> = () => {
 					<Form.Group as={Col} controlId='zip'>
 						<Form.Label>Zip Code</Form.Label>
 						<Form.Control value={formData.zip} name='zip' onChange={handleChange} required />
+					</Form.Group>
+
+					<Form.Group as={Col} controlId='companyName'>
+						<Form.Label>Company Name</Form.Label>
+						<Form.Control value={formData.companyName} name='companyName' onChange={handleChange} required />
 					</Form.Group>
 
 					<Form.Group controlId='files' className='mb-3'>

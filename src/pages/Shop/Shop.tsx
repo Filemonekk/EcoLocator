@@ -1,4 +1,4 @@
-import PageNav from '../components/PageNav/PageNav'
+import PageNav from '../../components/PageNav/PageNav'
 
 const Shop: React.FC =() => {
 	return (

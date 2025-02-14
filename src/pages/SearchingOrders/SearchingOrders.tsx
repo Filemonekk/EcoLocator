@@ -10,7 +10,7 @@ function SearchingOrders() {
 			<PageNav />
 			<main className={styles.container}>
 				<aside className={styles.sidebar}>
-					<Sidebar title='Formula' />
+					<Sidebar title='Waste notification list' />
 				</aside>
 				<section className={styles.content}>
 					<div className={styles.map}>
