@@ -1,4 +1,4 @@
-@use "/src/index.scss" as *;
+@use '/src/index.scss' as *;
 
 .navbar {
 	background-color: #ffffff;
@@ -20,12 +20,11 @@
 	height: 50px;
 }
 
-
 .ul-container {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-  justify-content: center;
+	justify-content: center;
 }
 
 .ul-container li {
@@ -53,7 +52,7 @@ li a:hover {
 }
 
 .navbar .active {
-	color:  $main-color;
+	color: $main-color;
 	text-decoration: none;
 }
 
@@ -106,4 +105,3 @@ li a:hover {
 		height: 40px;
 	}
 }
-

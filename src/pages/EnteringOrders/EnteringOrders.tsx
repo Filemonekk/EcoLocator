@@ -1,8 +1,8 @@
 import styles from './EnteringOrders.module.scss'
-import PageNav from '../components/PageNav/PageNav'
-import WasteForm from '../components/WasteForm/WasteForm'
+import PageNav from '../../components/PageNav/PageNav'
+import WasteForm from '../../components/WasteForm/WasteForm'
 
-const EnteringOrders: React.FC =() => {
+const EnteringOrders: React.FC = () => {
 	return (
 		<div>
 			<PageNav />
@@ -11,7 +11,7 @@ const EnteringOrders: React.FC =() => {
 			</div>
 			<div className={styles.wasteForm}>
 				<WasteForm />
-				</div>
+			</div>
 		</div>
 	)
 }

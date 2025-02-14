@@ -1,8 +1,8 @@
-import PageNav from '../components/PageNav/PageNav'
-import Sidebar from '../components/Sidebar/Sidebar'
+import PageNav from '../../components/PageNav/PageNav'
+import Sidebar from '../../components/Sidebar/Sidebar'
 import styles from './SearchingOrders.module.scss'
-import Map from '../components/Map/Map'
-import WasteCard from '../components/WasteCard/WasteCard'
+import Map from '../../components/Map/Map'
+import WasteCard from '../../components/WasteCard/WasteCard'
 
 function SearchingOrders() {
 	return (
@@ -17,7 +17,7 @@ function SearchingOrders() {
 						<Map titlemap='Map' />
 					</div>
 					<div className={styles.wasteCard}>
-					<WasteCard />
+						<WasteCard />
 					</div>
 				</section>
 			</main>
