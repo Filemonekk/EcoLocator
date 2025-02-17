@@ -9,7 +9,7 @@ const EnteringOrders: React.FC = () => {
 			<div className='text'>
 				<h1>Please fill the information</h1>
 			</div>
-			<div className={styles.wasteForm}>
+			<div className={styles.wasteFormula}>
 				<WasteForm />
 			</div>
 		</div>
