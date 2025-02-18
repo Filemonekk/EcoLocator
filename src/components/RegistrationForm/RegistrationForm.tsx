@@ -2,8 +2,9 @@ import { useState } from 'react'
 import Button from '../Button/Button'
 import styles from './RegistrationForm.module.scss'
 
+type AuthMode = 'Sign Up' | 'Login'
 interface RegistrationFormProps {
-	className?: string // Opcjonalny className
+	className?: string
 }
 
 type FormData = {
@@ -11,18 +12,21 @@ type FormData = {
 	companyId?: string
 	city: string
 	zipCode?: string
-	registrationPassword?: string
-	confirmRegistrationPassword?: string
+	email: string
+	password: string
+	confirmPassword?: string
 }
 
 const RegistrationForm: React.FC<RegistrationFormProps> = ({ className }) => {
+	const [authMode, setAuthMode] = useState<AuthMode>('Sign Up')
 	const [formData, setFormData] = useState<FormData>({
 		companyName: '',
 		companyId: '',
 		city: '',
 		zipCode: '',
-		registrationPassword: '',
-		confirmRegistrationPassword: '',
+		email: '',
+		password: '',
+		confirmPassword: '',
 	})
 
 	const [isSubmitted, setIsSubmitted] = useState(false)
@@ -37,8 +41,8 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ className }) => {
 		event.preventDefault()
 		setErrorMessage(null)
 
-		if (formData.registrationPassword !== formData.confirmRegistrationPassword) {
-			setErrorMessage('Passowords do not match!')
+		if (authMode === 'Sign Up' && formData.password !== formData.confirmPassword) {
+			setErrorMessage('Passwords do not match!')
 			return
 		}
 
@@ -84,8 +88,9 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ className }) => {
 				companyId: '',
 				city: '',
 				zipCode: '',
-				registrationPassword: '',
-				confirmRegistrationPassword: '',
+				email: '',
+				password: '',
+				confirmPassword: '',
 			})
 		} catch (error) {
 			setErrorMessage('Error submitting data. Please try again.')
@@ -95,42 +100,75 @@ const RegistrationForm: React.FC<RegistrationFormProps> = ({ className }) => {
 
 	return (
 		<div className={styles.container}>
-			<h1 className={styles.title}>Register</h1>
-			{isSubmitted && <div className={styles.successMessage}>Thank you! User successfully registered</div>}
+			<div className={styles.header}>
+				<div className={styles.text}>{authMode}</div>
+			</div>
+			{isSubmitted && (
+				<div className={styles.successMessage}>
+					{authMode === 'Sign Up' ? 'Thank you! User successfully registered.' : 'Login successful!'}
+				</div>
+			)}
 			{errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
 			<form onSubmit={handleSubmit} className={`${styles.formStyle} ${className || ''}`}>
-				<label htmlFor='companyName'>Company name</label>
-				<input
-					id='companyName'
-					type='text'
-					name='companyName'
-					value={formData.companyName}
-					onChange={handleInputChange}
-				/>
-				<label htmlFor='number'>Company ID</label>
-				<input id='number' type='number' name='companyId' value={formData.companyId} onChange={handleInputChange} />
-				<label htmlFor='text'>City</label>
-				<input id='text' type='text' name='city' value={formData.city} onChange={handleInputChange} />
-				<label htmlFor='zipCode'>Zip-Code</label>
-				<input id='zipCode' type='number' name='zipCode' value={formData.zipCode} onChange={handleInputChange} />
+				{authMode === 'Sign Up' && (
+					<>
+						<label htmlFor='companyName'>Company name</label>
+						<input
+							id='companyName'
+							type='text'
+							name='companyName'
+							value={formData.companyName}
+							onChange={handleInputChange}
+						/>
+						<label htmlFor='companyId'>Company ID</label>
+						<input
+							id='companyId'
+							type='number'
+							name='companyId'
+							value={formData.companyId}
+							onChange={handleInputChange}
+						/>
+						<label htmlFor='city'>City</label>
+						<input id='city' type='text' name='city' value={formData.city} onChange={handleInputChange} />
+						<label htmlFor='zipCode'>Zip-Code</label>
+						<input id='zipCode' type='number' name='zipCode' value={formData.zipCode} onChange={handleInputChange} />
+					</>
+				)}
+				<label htmlFor='email'>Email</label>
+				<input id='email' type='email' name='email' value={formData.email} onChange={handleInputChange} />
 				<label htmlFor='password'>Password</label>
-				<input
-					id='password'
-					type='password'
-					name='registrationPassword'
-					value={formData.registrationPassword}
-					onChange={handleInputChange}
-				/>
-				<label htmlFor='confirmPassword'>Confirm Password</label>
-				<input
-					id='confirmPassword'
-					type='password'
-					name='confirmRegistrationPassword'
-					value={formData.confirmRegistrationPassword}
-					onChange={handleInputChange}
-				/>
-				<Button type='submit' label='Register' />
+				<input id='password' type='password' name='password' value={formData.password} onChange={handleInputChange} />
+				{authMode === 'Sign Up' && (
+					<>
+						<label htmlFor='confirmPassword'>Confirm Password</label>
+						<input
+							id='confirmPassword'
+							type='password'
+							name='confirmPassword'
+							value={formData.confirmPassword}
+							onChange={handleInputChange}
+						/>
+					</>
+				)}
+				<Button type='submit' label={authMode === 'Sign Up' ? 'Register' : 'Login'} />
 			</form>
+			<div className={styles.switchMode}>
+				{authMode === 'Sign Up' ? (
+					<p>
+						Already have an account?{' '}
+						<span onClick={() => setAuthMode('Login')} className={styles.link}>
+							Login here
+						</span>
+					</p>
+				) : (
+					<p>
+						Don't have an account?{' '}
+						<span onClick={() => setAuthMode('Sign Up')} className={styles.link}>
+							Register here
+						</span>
+					</p>
+				)}
+			</div>
 		</div>
 	)
 }

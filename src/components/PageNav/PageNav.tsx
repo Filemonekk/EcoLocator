@@ -14,7 +14,7 @@ function PageNav() {
 				</li>
 				<Logo />
 				<li>
-					<NavLink to='/Register'>Register</NavLink>
+					<NavLink to='/Register'>Register/Login</NavLink>
 				</li>
 				<li>
 					<NavLink to='/Contact'>Contact</NavLink>
