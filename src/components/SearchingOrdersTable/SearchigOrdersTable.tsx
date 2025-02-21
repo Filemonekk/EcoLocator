@@ -23,6 +23,10 @@ const SearchingOrdersTable: React.FC = () => {
 	const { data, isLoading, error } = useAirtableDataWaste()
 	const [selectedWaste, setSelectedWaste] = useState<WasteRecord | null>(null)
 
+	const handleSelectWaste = (record: WasteRecord | null) => {
+		setSelectedWaste((prev) => (prev?.id === record?.id ? null : record));
+	};
+
 	if (isLoading) return <p>Loading data...</p>
 	if (error) return <p>Error while downloading data...</p>
 
@@ -44,9 +48,10 @@ const SearchingOrdersTable: React.FC = () => {
 							<td>{record.fields.City || 'Brak'}</td>
 							<td>{record.fields['Company Name'] || 'Brak'}</td>
 							<td>
-								<Button variant='primary' className={styles.detailsBtn} onClick={() => setSelectedWaste(record)}>
+								<Button variant='primary' className={styles.detailsBtn} onClick={() => handleSelectWaste(record)}>
 									Więcej
 								</Button>
+								
 							</td>
 						</tr>
 					))}
