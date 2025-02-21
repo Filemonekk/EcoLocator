@@ -3,8 +3,11 @@ import Sidebar from '../../components/Sidebar/Sidebar'
 import styles from './SearchingOrders.module.scss'
 import Map from '../../components/Map/Map'
 import WasteCard from '../../components/WasteCard/WasteCard'
+import { WasteRecord } from '../../components/SearchingOrdersTable/SearchigOrdersTable'
+import { useState } from 'react'
 
-function SearchingOrders() {
+const SearchingOrders: React.FC = () => {
+	const [selectedWaste, setSelectedWaste] = useState<WasteRecord | null>(null)
 	return (
 		<>
 			<PageNav />
@@ -17,7 +20,7 @@ function SearchingOrders() {
 						<Map titlemap='Map' />
 					</div>
 					<div className={styles.wasteCard}>
-						<WasteCard />
+						{selectedWaste ? <WasteCard waste={selectedWaste.fields} /> : <p>Wybierz odpad do wyświetlenia</p>}
 					</div>
 				</section>
 			</main>

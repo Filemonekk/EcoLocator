@@ -1,24 +1,38 @@
 import Card from 'react-bootstrap/Card'
-import ListGroup from 'react-bootstrap/ListGroup'
+import styles from './WasteCard.module.scss'
 
-function WasteCard() {
+interface WasteCardProps {
+	waste: {
+		'Type of waste'?: string
+		Description?: string
+		City?: string
+		'Company Name'?: string
+		Address?: string
+		ZipCode?: string
+		Files?: { url: string }[]
+	}
+}
+
+const WasteCard: React.FC<WasteCardProps> = ({ waste }) => {
 	return (
-		<Card style={{ width: '18rem' }}>
-			<Card.Img variant='top' src='holder.js/100px180?text=Image cap' />
+		<Card className={styles.wasteCard}>
+			{waste.Files && waste.Files.length > 0 && (
+				<Card.Img variant='top' src={waste.Files[0].url} alt='Zdjęcie odpadu' />
+			)}
 			<Card.Body>
-				<Card.Title>Card Title</Card.Title>
+				<Card.Title>{waste['Type of waste'] || 'Nieznany odpad'}</Card.Title>
 				<Card.Text>
-					Some quick example text to build on the card title and make up the bulk of the card's content.
+					<strong>Opis:</strong> {waste.Description || 'Brak opisu'}
 				</Card.Text>
-			</Card.Body>
-			<ListGroup className='list-group-flush'>
-				<ListGroup.Item>Cras justo odio</ListGroup.Item>
-				<ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
-				<ListGroup.Item>Vestibulum at eros</ListGroup.Item>
-			</ListGroup>
-			<Card.Body>
-				<Card.Link href='#'>Card Link</Card.Link>
-				<Card.Link href='#'>Another Link</Card.Link>
+				<Card.Text>
+					<strong>Miasto:</strong> {waste.City || 'Brak'}
+				</Card.Text>
+				<Card.Text>
+					<strong>Firma:</strong> {waste['Company Name'] || 'Brak'}
+				</Card.Text>
+				<Card.Text>
+					<strong>Adres:</strong> {waste.Address || 'Brak'}, {waste.ZipCode || ''}
+				</Card.Text>
 			</Card.Body>
 		</Card>
 	)
