@@ -1,6 +1,8 @@
+import React, { useState } from 'react'
 import { createHashRouter, RouterProvider } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.scss'
 import HomePage from './pages/HomePage/HomePage'
 import Admin from './pages/Admin/Admin'
@@ -11,6 +13,8 @@ import EnteringOrders from './pages/EnteringOrders/EnteringOrders'
 import SearchingOrders from './pages/SearchingOrders/SearchingOrders'
 import PageNotFound from './pages/PageNotFound'
 import Register from './pages/Register/Register'
+import PrivateRoute from './routes/PrivateRoute'
+import AdminLogin from './components/AdminLogin/AdminLogin'
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -29,10 +33,6 @@ const router = createHashRouter([
 	{
 		path: 'about',
 		element: <About />,
-	},
-	{
-		path: 'admin',
-		element: <Admin />,
 	},
 	{
 		path: 'shop',
@@ -76,13 +76,23 @@ const router = createHashRouter([
 		path: '*',
 		element: <PageNotFound />,
 	},
+	{
+		path: 'admin',
+		element: <PrivateRoute />, // Sprawdza autoryzację
+		children: [{ index: true, element: <Admin /> }],
+	},
 ])
 
 const App: React.FC = () => {
+	const [showLogin, setShowLogin] = useState(false)
 	return (
 		<QueryClientProvider client={queryClient}>
 			<ReactQueryDevtools initialIsOpen={false} />
-			<RouterProvider router={router} />
+			<RouterProvider router={router}>
+				{/* Modal logowania */}
+				<button onClick={() => setShowLogin(true)}>Logowanie Admina</button>
+				<AdminLogin show={showLogin} handleClose={() => setShowLogin(false)} />
+			</RouterProvider>
 		</QueryClientProvider>
 	)
 }

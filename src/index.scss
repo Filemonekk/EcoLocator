@@ -17,5 +17,17 @@ $main-font: 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 600;
 	padding: 1rem 3rem;
-	border-radius: 10px;
+}
+
+main {
+	flex: 1; // Wypełnia całą dostępną przestrzeń
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer {
+	margin: 0; // Usunięcie marginesów
+	padding: 0;
 }

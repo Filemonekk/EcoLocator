@@ -1,29 +1,42 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom'
-import styles from './Footer.module.scss';
+import React, { useState } from 'react'
+import AdminLogin from '../AdminLogin/AdminLogin'
+import styles from './Footer.module.scss'
+import { Button } from 'react-bootstrap'
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+	const currentYear = new Date().getFullYear()
+	const [showLogin, setShowLogin] = useState(false)
 
-  return (
-    <footer className={styles.footer}>
-      <div className={styles.container}>
+	return (
+		<footer className={styles.footer}>
+			<div className={styles.footerContener}>
+				<div className={styles.adminLogin}>
+					<Button variant='light' className={styles.loginButton} onClick={() => setShowLogin(true)}>
+						ADMIN
+					</Button>
+				</div>
 
-     <nav className={styles.navLinks} aria-label="Footer Navigation">
-          <NavLink to="/admin">Admin</NavLink>
-        </nav>
+				<nav className={styles.socials} aria-label='Footer Social Links'>
+					<a href='https://facebook.com' target='_blank' rel='noopener noreferrer'>
+						Facebook
+					</a>
+					<a href='https://twitter.com' target='_blank' rel='noopener noreferrer'>
+						Twitter
+					</a>
+					<a href='https://instagram.com' target='_blank' rel='noopener noreferrer'>
+						Instagram
+					</a>
+				</nav>
+			</div>
+			<div className={styles.bottomBar}>
+				<p>
+					&copy; {currentYear} <strong>EcoLocator</strong>. All Rights Reserved.
+				</p>
+			</div>
 
-        <div className={styles.socials}>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-        </div>
-      </div>
-      <div className={styles.bottomBar}>
-        <p>&copy; {currentYear} <strong>EcoLocator</strong>. All Rights Reserved.</p>
-      </div>
-    </footer>
-  );
-};
+			<AdminLogin show={showLogin} handleClose={() => setShowLogin(false)} />
+		</footer>
+	)
+}
 
-export default Footer;
+export default Footer
