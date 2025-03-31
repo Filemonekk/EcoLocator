@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cta:link,
+.cta:visited {
+  display: inline-block;
+  background-color: white;
+  color: #126d30;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 1rem 3rem;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 200px;
+  width: 600px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.text {
+  color: rgb(2, 85, 2);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.inputs {
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 480px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.input img {
+  margin: 0 30px;
+}
+.input input {
+  margin-top: 10px;
+  width: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: rgb(29, 1, 1);
+  font-size: 19px;
+}
+
+.forgotPassword {
+  padding-left: 62px;
+  margin-top: 30px;
+  color: #59804d;
+}
+.forgotPassword span {
+  cursor: pointer;
+  color: rgb(180, 98, 98);
+}
+
+.submitContainer {
+  display: flex;
+  gap: 30px;
+  margin: 60px auto;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 50px;
+  color: #fff;
+  background-color: #59804d;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.gray {
+  background-color: rgba(100, 156, 114, 0.7254901961);
+  color: gray;
+}/*# sourceMappingURL=LoginSignUp.module.css.map */

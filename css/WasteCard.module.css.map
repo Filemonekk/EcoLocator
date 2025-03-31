@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/components/WasteCard/WasteCard.module.scss","WasteCard.module.css"],"names":[],"mappings":"AAAA;EACC,mBAAA;EACA,0CAAA;EACA,kBAAA;ACCD;ADCC;EACC,iBAAA;EACA,oBAAA;KAAA,iBAAA;ACCF;ADEC;EACC,aAAA;ACAF","file":"WasteCard.module.css"}

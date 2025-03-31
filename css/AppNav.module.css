@@ -1,0 +1,23 @@
+.navList {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.navList ul {
+  list-style: none;
+  display: flex;
+  background-color: #48a870;
+  border-radius: 7px;
+}
+.navList a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+}
+.navList :global(.active) {
+  background-color: #133f25;
+}/*# sourceMappingURL=AppNav.module.css.map */

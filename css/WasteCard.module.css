@@ -1,0 +1,13 @@
+.wasteCard {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.wasteCard img {
+  max-height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wasteCard .card-body {
+  padding: 15px;
+}/*# sourceMappingURL=WasteCard.module.css.map */
